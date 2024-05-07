@@ -1,0 +1,40 @@
+syntax="proto2";
+package example;
+
+option cc_generic_services = true;
+
+message NetDiskRequest {
+    required uint32 op_type = 1;
+    //文件分片数
+    required uint32 shard = 2;
+    //当前文件所在分片
+    required uint32 part_index = 3;
+    //当前文件所在分片的md5
+    required string part_sign = 4;
+    //文件名
+    required bytes file_name = 5;
+    //文件所有分片合并后md5
+    required string file_sign = 6;
+    //文件提交的用户名
+    required string usr = 7;
+    //文件内容
+    required bytes body = 8;
+
+};
+
+message NetDiskResponse {
+    //返回服务器msg、标记错误
+    required bool res = 1;
+    //文件分片数
+    required uint32 shard = 2;
+    //当前文件所在分片
+    required uint32 part_index = 3;
+    //文件名
+    required string file_name = 4;
+    //文件内容
+    required string body = 6;
+};
+
+service NetDiskService {
+      rpc Send(NetDiskRequest) returns (NetDiskResponse);
+};

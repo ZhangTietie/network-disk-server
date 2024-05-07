@@ -1,0 +1,10 @@
+export LANG="zh_HK.utf8"
+export LC_CTYPE="zh_HK.utf8"
+export LC_ALL="zh_HK.utf8"
+
+
+alias vi='vim'
+alias ls='ls --color=auto'
+alias ll='ls -al --color=auto'
+
+lovely lulu, it's error >_<|||
