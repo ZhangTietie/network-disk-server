@@ -42,7 +42,7 @@
 - 编译运行：
 1. 执行下面的命令进行编译,服务器的bin为build/serverMain，客户端的bin为build/clientMain
 ```
-git clone git@jihulab.com:lxw01/network-disk-server.git
+git clone https://github.com/ZhangTietie/network-disk-server.git
 sh make.sh
 ```
 2. 服务器的bin为build/serverMain，代码中提供了默认配置可以通过gflags的方式进行修改，内容参考include/gflag_def.h
